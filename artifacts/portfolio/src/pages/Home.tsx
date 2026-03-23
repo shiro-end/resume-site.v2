@@ -14,7 +14,7 @@ export default function Home() {
             <a href="#experience" className="hover:text-white">Experience</a>
             <a href="#skills" className="hover:text-white">Skills</a>
             <a href="#works" className="hover:text-white">Works</a>
-            <a href="#articles" className="hover:text-white">Articles</a>
+            <a href="#interests" className="hover:text-white">興味・関心</a>
             <a href="#talks" className="hover:text-white">Talks</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
@@ -143,93 +143,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Articles */}
-        <section id="articles" className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Articles</h2>
+        {/* Interests */}
+        <section id="interests" className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">興味・関心</h2>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {[
               {
-                category: "SRE",
-                articles: [
-                  { title: "SREとDevOpsのおすすめ書籍まとめ", url: "https://qiita.com/yuzoiwasaki/items/eb9fbcb942d6f5c6fce4" },
-                  { title: "CAMPFIREにSREを導入した話", url: "https://qiita.com/yuzoiwasaki/items/d8b56a98822e2b2bb6e7" },
-                  { title: "SREチームのマネージャーを引退します！", url: "https://note.com/campfire_dev/n/na9fc70a3654b" },
-                  { title: "ポストモーテムとは", url: "https://note.com/campfire_dev/n/n2a46e3832207" },
-                  { title: "トイルとは", url: "https://note.com/campfire_dev/n/nd34ae0bee2fa" },
-                  { title: "エラーバジェットとは", url: "https://note.com/campfire_dev/n/nd1b73ecbc17c" },
-                  { title: "SREチームのインシデント対応について", url: "https://note.com/campfire_dev/n/n44b01a26d3d7" },
-                  { title: "ポストモーテム読書会を開催しました！", url: "https://note.com/campfire_dev/n/nfe332057001e" },
-                  { title: "プロダクションミーティングをやってみた", url: "https://note.com/campfire_dev/n/n9798f6d18182" },
-                  { title: "SREにおけるコンテキストの話", url: "https://note.com/gch/n/n07ffec31d5a0" },
+                category: "ガジェット",
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
                 ],
               },
               {
-                category: "ソフトウェアエンジニアリング",
-                articles: [
-                  { title: "Nuxt+Bulma+S3でライブハウス支援サイトを作った", url: "https://qiita.com/yuzoiwasaki/items/d9b6ffa4ca1351825eee" },
-                  { title: "Slack のスラッシュコマンドをサーバーレス構成で作ってみた", url: "https://zenn.dev/yuzoiwasaki/articles/e99a5a103902ba" },
-                  { title: "初めてVimプラグインを自作してみた", url: "https://qiita.com/yuzoiwasaki/items/a6f03b170ca21700b969" },
-                  { title: "imgixで遅延ロードを実装してみる", url: "https://qiita.com/yuzoiwasaki/items/27faa9f6b55babd783c7" },
-                  { title: "SvelteKit でポートフォリオサイトを作ってみる", url: "https://zenn.dev/yuzoiwasaki/articles/7ed13f9c595047" },
-                ],
-              },
-              {
-                category: "マネジメント",
-                articles: [
-                  { title: "エンジニアリングマネージャーとして意識していること", url: "https://note.com/gch/n/ned8ffe2d19ea" },
-                  { title: "エンジニアリングマネージャーとしての数ヶ月を振り返る", url: "https://qiita.com/yuzoiwasaki/items/c37aad8b0c3aae4626e0" },
-                  { title: "VPoE評価アンケートをやってみた", url: "https://note.com/gch/n/nde6c0a8d885a" },
-                  { title: "ヤフーの1on1を読んだちょっとした感想", url: "https://note.com/gch/n/n8a8c70d59f40" },
-                ],
-              },
-              {
-                category: "採用",
-                articles: [
-                  { title: "自分が考える良いカジュアル面談", url: "https://note.com/gch/n/nc19373d28cad" },
-                  { title: "SREの採用で意識していること", url: "https://note.com/campfire_dev/n/n6d82b67a2412" },
-                ],
-              },
-              {
-                category: "IT統制",
-                articles: [
-                  { title: "初心者のためのIT統制マニュアル", url: "https://note.com/gch/n/n218640763953" },
-                  { title: "2024年のIT統制はどうなるの？", url: "https://note.com/gch/n/nd5a5344c5fe7" },
-                  { title: "最近のIT統制資料いろいろ", url: "https://note.com/gch/n/nf159a18d2fbc" },
+                category: "生成AI",
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
                 ],
               },
               {
                 category: "セキュリティ",
-                articles: [
-                  { title: "セキュリティチェックシートを作った話", url: "https://note.com/gch/n/n9f1de7992952" },
-                  { title: "ギャルによるAI活用ガイドライン", url: "https://note.com/gch/n/nd209629c6f65" },
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
+                ],
+              },
+              {
+                category: "人事",
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
+                ],
+              },
+              {
+                category: "採用",
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
                 ],
               },
               {
                 category: "その他",
-                articles: [
-                  { title: "CAMPFIREでの8年間を振り返る", url: "https://note.com/gch/n/nc59e3401ed39" },
-                  { title: "外国人の子どもたちを対象にプログラミング教室を始めます", url: "https://note.com/gch/n/nf6ddccf7de1e" },
-                  { title: "プログラミングワークショップ", url: "https://note.com/gch/n/n10b89a5b1827" },
+                videos: [
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
+                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
                 ],
               },
             ].map((group) => (
               <div key={group.category}>
                 <h3 className="text-base font-semibold text-gray-800 mb-3">{group.category}</h3>
-                <ul className="space-y-2">
-                  {group.articles.map((article) => (
-                    <li key={article.url}>
-                      <a
-                        href={article.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        {article.title}
-                      </a>
-                    </li>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {group.videos.map((video, i) => (
+                    <a
+                      key={i}
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                    >
+                      <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                        <img
+                          src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                          alt={video.title}
+                          className="absolute inset-0 w-full h-full object-cover bg-gray-100"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = "none";
+                            (e.target as HTMLImageElement).parentElement!.style.background = "#f3f4f6";
+                          }}
+                        />
+                      </div>
+                      <div className="p-3">
+                        <p className="text-sm font-medium text-gray-900 line-clamp-2">{video.title}</p>
+                      </div>
+                    </a>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>

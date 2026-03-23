@@ -148,7 +148,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Interests</h2>
 
           <div className="space-y-10">
-            {[
+            {([
               {
                 category: "ガジェット",
                 videos: [
@@ -158,10 +158,10 @@ export default function Home() {
               },
               {
                 category: "生成AI",
-                videos: [
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
+                tools: [
+                  { name: "ChatGPT", icon: "https://cdn.simpleicons.org/openai/000000", url: "https://chat.openai.com" },
+                  { name: "Codex", icon: "https://cdn.simpleicons.org/openai/6b7280", url: "https://platform.openai.com/docs/guides/code" },
+                  { name: "Replit Agent", icon: "https://cdn.simpleicons.org/replit/F26207", url: "https://replit.com" },
                 ],
               },
               {
@@ -196,35 +196,55 @@ export default function Home() {
                   { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
                 ],
               },
-            ].map((group) => (
+            ] as Array<
+              { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never } |
+              { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never }
+            >).map((group) => (
               <div key={group.category}>
                 <h3 className="text-base font-semibold text-gray-800 mb-3">{group.category}</h3>
-                <div className={`grid grid-cols-1 gap-4 ${group.videos.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
-                  {group.videos.map((video, i) => (
-                    <a
-                      key={i}
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
-                    >
-                      <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
-                        <img
-                          src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
-                          alt={video.title}
-                          className="absolute inset-0 w-full h-full object-cover bg-gray-100"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = "none";
-                            (e.target as HTMLImageElement).parentElement!.style.background = "#f3f4f6";
-                          }}
-                        />
-                      </div>
-                      <div className="p-3">
-                        <p className="text-sm font-medium text-gray-900 line-clamp-2">{video.title}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                {"tools" in group && group.tools ? (
+                  <div className="flex flex-wrap gap-3">
+                    {group.tools.map((tool, i) => (
+                      <a
+                        key={i}
+                        href={tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-2 p-4 border border-gray-200 rounded-lg hover:border-gray-400 hover:shadow-sm transition-all w-28"
+                      >
+                        <img src={tool.icon} alt={tool.name} className="w-10 h-10 object-contain" />
+                        <span className="text-xs text-gray-700 text-center font-medium">{tool.name}</span>
+                      </a>
+                    ))}
+                  </div>
+                ) : group.videos ? (
+                  <div className={`grid grid-cols-1 gap-4 ${group.videos.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
+                    {group.videos.map((video, i) => (
+                      <a
+                        key={i}
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                      >
+                        <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                          <img
+                            src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                            alt={video.title}
+                            className="absolute inset-0 w-full h-full object-cover bg-gray-100"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = "none";
+                              (e.target as HTMLImageElement).parentElement!.style.background = "#f3f4f6";
+                            }}
+                          />
+                        </div>
+                        <div className="p-3">
+                          <p className="text-sm font-medium text-gray-900 line-clamp-2">{video.title}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>

@@ -3,8 +3,11 @@ export default function Home() {
     <div className="min-h-screen bg-white text-gray-900">
       <nav className="fixed top-0 left-0 right-0 bg-black z-50">
         <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="font-semibold text-white hover:text-gray-300">
-            Yuzo Iwasaki
+          <a href="#" className="flex items-center gap-3 hover:opacity-80">
+            <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+              YI
+            </div>
+            <span className="font-semibold text-white">Yuzo Iwasaki</span>
           </a>
           <div className="flex gap-5 text-sm text-gray-300">
             <a href="#about" className="hover:text-white">About</a>

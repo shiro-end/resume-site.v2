@@ -166,10 +166,10 @@ export default function Home() {
               },
               {
                 category: "セキュリティ",
-                books: [
-                  { title: "Ransomware Pursuit Team", asin: "B0CF1C9667", url: "https://www.amazon.co.jp/dp/B0CF1C9667" },
-                  { title: "ランサムウエアから会社を守る", asin: "B0BMNZKN5J", url: "https://www.amazon.co.jp/dp/B0BMNZKN5J" },
-                  { title: "経営層のためのサイバーセキュリティ実践入門", asin: "B0CW1BRK98", url: "https://www.amazon.co.jp/dp/B0CW1BRK98" },
+                booklist: [
+                  { title: "Ransomware Pursuit Team", url: "https://www.amazon.co.jp/dp/B0CF1C9667" },
+                  { title: "ランサムウエアから会社を守る", url: "https://www.amazon.co.jp/dp/B0BMNZKN5J" },
+                  { title: "経営層のためのサイバーセキュリティ実践入門", url: "https://www.amazon.co.jp/dp/B0CW1BRK98" },
                 ],
               },
               {
@@ -184,14 +184,6 @@ export default function Home() {
                 ],
               },
               {
-                category: "採用",
-                videos: [
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
-                ],
-              },
-              {
                 category: "その他",
                 videos: [
                   { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
@@ -200,10 +192,9 @@ export default function Home() {
                 ],
               },
             ] as Array<
-              { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never; books?: never; booklist?: never } |
-              { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never; books?: never; booklist?: never } |
-              { category: string; books: { title: string; asin: string; url: string }[]; tools?: never; videos?: never; booklist?: never } |
-              { category: string; booklist: { title: string; url: string }[]; tools?: never; videos?: never; books?: never }
+              { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never; booklist?: never } |
+              { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never; booklist?: never } |
+              { category: string; booklist: { title: string; url: string }[]; tools?: never; videos?: never }
             >).map((group) => (
               <div key={group.category}>
                 <h3 className="text-base font-semibold text-gray-800 mb-3">{group.category}</h3>
@@ -219,32 +210,6 @@ export default function Home() {
                       >
                         <img src={tool.icon} alt={tool.name} className="w-10 h-10 object-contain" />
                         <span className="text-xs text-gray-700 text-center font-medium">{tool.name}</span>
-                      </a>
-                    ))}
-                  </div>
-                ) : "books" in group && group.books ? (
-                  <div className="grid grid-cols-3 gap-4">
-                    {group.books.map((book, i) => (
-                      <a
-                        key={i}
-                        href={book.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow flex flex-col"
-                      >
-                        <div className="bg-gray-100 flex items-center justify-center overflow-hidden" style={{ aspectRatio: "2/3" }}>
-                          <img
-                            src={`https://images-na.ssl-images-amazon.com/images/P/${book.asin}.01.LZZZZZZZ.jpg`}
-                            alt={book.title}
-                            className="w-full h-full object-cover"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).style.display = "none";
-                            }}
-                          />
-                        </div>
-                        <div className="p-3">
-                          <p className="text-xs font-medium text-gray-900 line-clamp-3">{book.title}</p>
-                        </div>
                       </a>
                     ))}
                   </div>

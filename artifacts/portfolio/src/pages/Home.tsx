@@ -26,7 +26,7 @@ export default function Home() {
         <section id="about" className="mb-16">
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">About Me</h2>
           <p className="text-gray-700 leading-relaxed">
-            エンジニア歴15年程度のベテランエンジニアです。ソフトウェアエンジニアリングをはじめ、SREやマネジメント、採用、IT統制など幅広く関わってきました。最近はセキュリティ、内部統制、情シスあたりをやっています。
+            人事歴10年、個人事業歴6年のフリーランス人事です。支援する企業様の規模や業種を問わず成果を出し続けてきました。最近は仕事もさることながら、経営と生成AIの交わるを考えながら日々の学びを深めています。
           </p>
         </section>
 

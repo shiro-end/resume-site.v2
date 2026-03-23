@@ -7,7 +7,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
               <img src="/avatar.jpg" alt="avatar" className="w-full h-full object-cover object-top" />
             </div>
-            <span className="font-semibold text-white">Yuzo Iwasaki</span>
+            <span className="font-semibold text-white">Tatsuya Kuroiwa</span>
           </a>
           <div className="flex gap-5 text-sm text-gray-300">
             <a href="#about" className="hover:text-white">About</a>

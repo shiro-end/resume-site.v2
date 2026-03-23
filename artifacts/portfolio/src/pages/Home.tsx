@@ -1,18 +1,18 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-black z-50">
         <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="font-semibold text-gray-900 hover:text-gray-600">
+          <a href="#" className="font-semibold text-white hover:text-gray-300">
             Yuzo Iwasaki
           </a>
-          <div className="flex gap-5 text-sm text-gray-600">
-            <a href="#about" className="hover:text-gray-900">About</a>
-            <a href="#experience" className="hover:text-gray-900">Experience</a>
-            <a href="#skills" className="hover:text-gray-900">Skills</a>
-            <a href="#articles" className="hover:text-gray-900">Articles</a>
-            <a href="#talks" className="hover:text-gray-900">Talks</a>
-            <a href="#contact" className="hover:text-gray-900">Contact</a>
+          <div className="flex gap-5 text-sm text-gray-300">
+            <a href="#about" className="hover:text-white">About</a>
+            <a href="#experience" className="hover:text-white">Experience</a>
+            <a href="#skills" className="hover:text-white">Skills</a>
+            <a href="#articles" className="hover:text-white">Articles</a>
+            <a href="#talks" className="hover:text-white">Talks</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
           </div>
         </div>
       </nav>

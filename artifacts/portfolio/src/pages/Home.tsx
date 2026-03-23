@@ -72,38 +72,17 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Skills</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { name: "Ruby", years: "5年以上", slug: "ruby" },
-              { name: "Rails", years: "5年以上", slug: "rails" },
-              { name: "JavaScript", years: "5年以上", slug: "javascript" },
-              { name: "SRE", years: "5年以上", slug: "sre" },
-              { name: "AWS", years: "5年以上", slug: "aws" },
-              { name: "Google Cloud", years: "2年", slug: "google-cloud" },
-              { name: "Terraform", years: "3年", slug: "terraform" },
-              { name: "セキュリティ", years: "5年以上", slug: "security" },
-              { name: "ネットワーク", years: "5年以上", slug: "network" },
-              { name: "データベース", years: "5年以上", slug: "database" },
-              { name: "OS", years: "5年以上", slug: "os" },
-              { name: "ハードウェア", years: "3年", slug: "hardware" },
-              { name: "マネジメント", years: "5年以上", slug: "management" },
-              { name: "採用", years: "5年以上", slug: "recruitment" },
-              { name: "情シス", years: "3年", slug: "information-systems" },
-              { name: "IT統制", years: "5年以上", slug: "it-control" },
-              { name: "ISMS", years: "1年", slug: "isms" },
-              { name: "英語", years: "5年以上", slug: "english" },
-              { name: "ポルトガル語", years: "4年", slug: "portuguese" },
-              { name: "将棋", years: "5年以上", slug: "shogi" },
+              { name: "営業", years: "3年" },
+              { name: "採用", years: "10年以上" },
+              { name: "教育", years: "4年" },
+              { name: "労務", years: "4年" },
+              { name: "給与", years: "4年" },
+              { name: "福利厚生", years: "4年" },
+              { name: "評価", years: "4年" },
             ].map((skill) => (
-              <div key={skill.slug} className="border border-gray-200 rounded p-4">
+              <div key={skill.name} className="border border-gray-200 rounded p-4">
                 <div className="font-medium text-gray-900">{skill.name}</div>
                 <div className="text-sm text-gray-500 mt-1">{skill.years}</div>
-                <a
-                  href={`https://yuzoiwasaki-me.vercel.app/skills/${skill.slug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:underline mt-2 inline-block"
-                >
-                  Read More
-                </a>
               </div>
             ))}
           </div>

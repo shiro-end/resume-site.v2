@@ -174,10 +174,13 @@ export default function Home() {
               },
               {
                 category: "人事",
-                videos: [
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
+                booklist: [
+                  { title: "ヒューマン・リソース・マネジメント", url: "https://www.amazon.co.jp/dp/4478440514" },
+                  { title: "ダイアローグ 対話する組織", url: "https://www.amazon.co.jp/dp/4478005672" },
+                  { title: "働くひとのためのキャリア・デザイン", url: "https://www.amazon.co.jp/dp/456961941X" },
+                  { title: "人が育つ会社をつくる―キャリア創造のマネジメント", url: "https://www.amazon.co.jp/dp/4532312825" },
+                  { title: "人事アセスメントの科学", url: "https://www.amazon.co.jp/dp/4382054354" },
+                  { title: "人事評価の総合科学", url: "https://www.amazon.co.jp/dp/4561265384" },
                 ],
               },
               {
@@ -197,9 +200,10 @@ export default function Home() {
                 ],
               },
             ] as Array<
-              { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never; books?: never } |
-              { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never; books?: never } |
-              { category: string; books: { title: string; asin: string; url: string }[]; tools?: never; videos?: never }
+              { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never; books?: never; booklist?: never } |
+              { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never; books?: never; booklist?: never } |
+              { category: string; books: { title: string; asin: string; url: string }[]; tools?: never; videos?: never; booklist?: never } |
+              { category: string; booklist: { title: string; url: string }[]; tools?: never; videos?: never; books?: never }
             >).map((group) => (
               <div key={group.category}>
                 <h3 className="text-base font-semibold text-gray-800 mb-3">{group.category}</h3>
@@ -244,6 +248,22 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
+                ) : "booklist" in group && group.booklist ? (
+                  <ul className="space-y-2">
+                    {group.booklist.map((book, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <span className="text-gray-400 text-xs">📖</span>
+                        <a
+                          href={book.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-800 hover:text-blue-600 hover:underline"
+                        >
+                          {book.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 ) : group.videos ? (
                   <div className={`grid grid-cols-1 gap-4 ${group.videos.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
                     {group.videos.map((video, i) => (

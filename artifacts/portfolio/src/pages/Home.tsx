@@ -37,35 +37,32 @@ export default function Home() {
 
           <div className="space-y-10">
             <div>
-              <h3 className="text-lg font-semibold mb-1">GMOタウンWiFi株式会社</h3>
-              <p className="text-sm text-gray-500 mb-3">期間: 2025年 - 現在</p>
-              <p className="text-gray-700 leading-relaxed">
-                業務内容: 2025年8月よりリファラル経由で入社。現在はグループ会社も含めたセキュリティ、内部統制、情シス業務を担当しています。
-              </p>
+              <h3 className="text-lg font-semibold mb-3">フリーランス人事</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>大手ITコンサル子会社でエンジニアのダイレクトリクルーティング【６年/更新中】</li>
+                <li>ベンチャー企業の採用コンサル及びスカウト業務【１年】</li>
+                <li>中小企業で人事マネージャー業務【４年】</li>
+                <li>メーカー企業で新卒採用担当業務【１年】</li>
+                <li>社員0名のベンチャー企業でなんでも担当【２年/更新中】</li>
+                <li>広告業界で採用領域のなんでも担当【２年/更新中】</li>
+                <li>ベンチャー企業の壁打ち担当【１年】</li>
+              </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-1">株式会社CAMPFIRE</h3>
-              <p className="text-sm text-gray-500 mb-3">期間: 2016年 - 2025年</p>
-              <p className="text-gray-700 leading-relaxed">
-                業務内容: 前職の経営悪化によりサーバーサイドエンジニアとしてジョイン、当初はCakePHPでできたアプリケーションの開発に関わっていました。Ruby/Railsでのリプレイスを経て、SREに転向、SREチームの立ち上げとリード、マネージャーを経験しました。その後開発チームのマネージャーを経てVPoE/プロダクト開発部長に就任。マネジメントや採用、IT統制など幅広く関わりました。
-              </p>
+              <h3 className="text-lg font-semibold mb-3">事業会社人事（電通グループ）</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>採用・教育・労務・給与・評価を含めた人事領域全般を担当</li>
+                <li>新卒・中途採用の企画〜実行までを一貫して推進</li>
+                <li>採用・教育ノウハウをグループ会社に営業、プロジェクト管理から請求まで行い間接部門で歴代唯一数字を持った</li>
+              </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-1">株式会社ワンズ</h3>
-              <p className="text-sm text-gray-500 mb-3">期間: 2015年 - 2016年</p>
-              <p className="text-gray-700 leading-relaxed">
-                業務内容: 新しいチャレンジを求めてWeb業界に転職し、プログラマとしておもにRailsアプリケーションの開発に従事しました。小さい会社だったためSEO担当も兼任しており、この時期にWeb開発の基礎とSEOについての深い知見を身に付けました。
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-1">日本サード・パーティ株式会社</h3>
-              <p className="text-sm text-gray-500 mb-3">期間: 2010年 - 2014年</p>
-              <p className="text-gray-700 leading-relaxed">
-                業務内容: おもにHP Factory Expressというサービスにインフラエンジニアとして関わっていました。キッティング、ラッキングからソフトウェアのインストール及び設定、トラブルシューティング、シェルスクリプトやVBAを使った業務効率化など様々な業務を行いました。特にLinux周りに関わることが多く、最終的にはソフトウェアチームのリーダーとして現場を率いていました。また、会社が資格取得を奨励していたこともあり、LPICやCCNAなどのベンダ資格を4年間で10個以上取得しました。
-              </p>
+              <h3 className="text-lg font-semibold mb-3">人事向け営業会社</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>営業担当として人事担当者向けに商材の提案</li>
+              </ul>
             </div>
           </div>
         </section>

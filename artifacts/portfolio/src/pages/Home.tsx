@@ -15,7 +15,6 @@ export default function Home() {
             <a href="#skills" className="hover:text-white">Skills</a>
             <a href="#works" className="hover:text-white">Works</a>
             <a href="#interests" className="hover:text-white">Interests</a>
-            <a href="#talks" className="hover:text-white">Talks</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
         </div>
@@ -183,14 +182,6 @@ export default function Home() {
                   { title: "人事評価の総合科学", url: "https://www.amazon.co.jp/dp/4561265384" },
                 ],
               },
-              {
-                category: "その他",
-                videos: [
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
-                ],
-              },
             ] as Array<
               { category: string; tools: { name: string; icon: string; url: string }[]; videos?: never; booklist?: never } |
               { category: string; videos: { title: string; videoId: string; url: string }[]; tools?: never; booklist?: never } |
@@ -262,40 +253,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Talks */}
-        <section id="talks" className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Talks</h2>
-          <ul className="space-y-3">
-            {[
-              { title: "小さい組織でのSREの探求", url: "https://speakerdeck.com/yuzoiwasaki/xiao-saizu-zhi-deno-sre-notan-qiu" },
-              { title: "MIXI・ZOZO・CAMPFIRE　SRE合同採用イベント〈３社でSREを再考してみる〉イベントレポート", url: "https://mixil.mixi.co.jp/report/16305" },
-              { title: "Perl student has become SRE", url: "https://speakerdeck.com/yuzoiwasaki/perl-student-has-become-sre" },
-              { title: "DevOpsとリーンの理論と実践", url: "https://speakerdeck.com/yuzoiwasaki/devopstorinfalseli-lun-toshi-jian" },
-            ].map((talk) => (
-              <li key={talk.url}>
-                <a
-                  href={talk.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline text-sm"
-                >
-                  {talk.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         {/* Contact */}
         <section id="contact" className="mb-16">
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Contact</h2>
           <p className="text-gray-700">
             お問い合わせは以下のメールアドレスまでお気軽にどうぞ:{" "}
             <a
-              href="mailto:yuzoiwasaki0929@gmail.com"
+              href="mailto:kuroiwa.work@gmail.com"
               className="text-blue-600 hover:underline"
             >
-              yuzoiwasaki0929@gmail.com
+              kuroiwa.work@gmail.com
             </a>
           </p>
         </section>

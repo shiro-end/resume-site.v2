@@ -13,6 +13,7 @@ export default function Home() {
             <a href="#about" className="hover:text-white">About</a>
             <a href="#experience" className="hover:text-white">Experience</a>
             <a href="#skills" className="hover:text-white">Skills</a>
+            <a href="#works" className="hover:text-white">Works</a>
             <a href="#articles" className="hover:text-white">Articles</a>
             <a href="#talks" className="hover:text-white">Talks</a>
             <a href="#contact" className="hover:text-white">Contact</a>
@@ -106,6 +107,58 @@ export default function Home() {
                 >
                   Read More
                 </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Works */}
+        <section id="works" className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Works</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              {
+                title: "作品名1",
+                description: "作品の簡単な説明文をここに入れてください。",
+                tags: ["タグ1", "タグ2"],
+                url: "#",
+              },
+              {
+                title: "作品名2",
+                description: "作品の簡単な説明文をここに入れてください。",
+                tags: ["タグ1", "タグ2", "タグ3"],
+                url: "#",
+              },
+              {
+                title: "作品名3",
+                description: "作品の簡単な説明文をここに入れてください。",
+                tags: ["タグ1", "タグ2"],
+                url: "#",
+              },
+            ].map((work) => (
+              <div key={work.title} className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+                <div className="bg-gray-100 h-36 flex items-center justify-center text-gray-400 text-sm">
+                  thumbnail
+                </div>
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="font-bold text-gray-900 mb-1">{work.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">{work.description}</p>
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {work.tags.map((tag) => (
+                      <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={work.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
+                  >
+                    詳しく見る
+                  </a>
+                </div>
               </div>
             ))}
           </div>

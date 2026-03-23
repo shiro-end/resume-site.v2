@@ -158,10 +158,10 @@ export default function Home() {
               },
               {
                 category: "生成AI",
-                tools: [
-                  { name: "ChatGPT", icon: "https://cdn.simpleicons.org/openai/000000", url: "https://chat.openai.com" },
-                  { name: "Codex", icon: "https://cdn.simpleicons.org/openai/6b7280", url: "https://platform.openai.com/docs/guides/code" },
-                  { name: "Replit Agent", icon: "https://cdn.simpleicons.org/replit/F26207", url: "https://replit.com" },
+                videos: [
+                  { title: '【"数学オリンピック優勝"のAIは便利なのか】今井翔太「AIは賢くなり過ぎた」「2026年は"仕事で使えるAI"の競争」／ChatGPTとGeminiは「動画と科学」で革命起こす【1on1 Tech】', videoId: "Bt761_2_Fgo", url: "https://www.youtube.com/watch?v=Bt761_2_Fgo" },
+                  { title: "Now Available: Replit Agent 3", videoId: "nr6qrQTv7QI", url: "https://www.youtube.com/watch?v=nr6qrQTv7QI" },
+                  { title: "【トップAI起業家が断言：2026年中に言語の壁はなくなる】音声AIで挑む言語の壁／メガネが最適な理由／英語以外の世界が広がる／正確性の急上昇／どう稼ぐか？／AI時代に必要なスキル／高市首相への提言", videoId: "N30YYfIqGEg", url: "https://www.youtube.com/watch?v=N30YYfIqGEg" },
                 ],
               },
               {

@@ -152,9 +152,8 @@ export default function Home() {
               {
                 category: "ガジェット",
                 videos: [
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_1", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_1" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_2", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_2" },
-                  { title: "動画タイトルをここに入れてください", videoId: "YOUTUBE_VIDEO_ID_3", url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_3" },
+                  { title: "「最強充電器」決定版2025夏 ～140W部門～ 有名メーカー製品5つを実機比較＆徹底検証！", videoId: "YRERsKIluvA", url: "https://www.youtube.com/watch?v=YRERsKIluvA" },
+                  { title: "【システム構築編】Raspberry Pi 5 × 外付けGPUでどこまで高速化できるのか？【part1/2】", videoId: "q48pcksDEiI", url: "https://www.youtube.com/watch?v=q48pcksDEiI" },
                 ],
               },
               {
@@ -200,7 +199,7 @@ export default function Home() {
             ].map((group) => (
               <div key={group.category}>
                 <h3 className="text-base font-semibold text-gray-800 mb-3">{group.category}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className={`grid grid-cols-1 gap-4 ${group.videos.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
                   {group.videos.map((video, i) => (
                     <a
                       key={i}

@@ -79,6 +79,9 @@ export default function Home() {
               { name: "給与", years: "4年" },
               { name: "福利厚生", years: "4年" },
               { name: "評価", years: "4年" },
+              { name: "役員会資料作成", years: "4年" },
+              { name: "HRシステム導入・進行管理", years: "4年" },
+              { name: "各種委員会運営", years: "4年" },
             ].map((skill) => (
               <div key={skill.name} className="border border-gray-200 rounded p-4">
                 <div className="font-medium text-gray-900">{skill.name}</div>

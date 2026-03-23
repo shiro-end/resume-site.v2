@@ -4,8 +4,8 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 bg-black z-50">
         <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 hover:opacity-80">
-            <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-              YI
+            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+              <img src="/avatar.jpg" alt="avatar" className="w-full h-full object-cover object-top" />
             </div>
             <span className="font-semibold text-white">Yuzo Iwasaki</span>
           </a>

@@ -14,7 +14,7 @@ export default function Home() {
             <a href="#experience" className="hover:text-white">Experience</a>
             <a href="#skills" className="hover:text-white">Skills</a>
             <a href="#works" className="hover:text-white">Works</a>
-            <a href="#interests" className="hover:text-white">興味・関心</a>
+            <a href="#interests" className="hover:text-white">Interests</a>
             <a href="#talks" className="hover:text-white">Talks</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
 
         {/* Interests */}
         <section id="interests" className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">興味・関心</h2>
+          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Interests</h2>
 
           <div className="space-y-10">
             {[

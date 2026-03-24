@@ -126,14 +126,35 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Work 2 - Coming Soon */}
-            <div className="border border-dashed border-gray-300 rounded-lg overflow-hidden flex flex-col opacity-60">
-              <div className="bg-gray-50 h-36 flex items-center justify-center text-gray-300 text-3xl">
-                🚧
+            {/* Work 2 */}
+            <div className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+              <div className="h-36 overflow-hidden">
+                <img
+                  src="/work-miro-recruit.png"
+                  alt="新卒採用の情報整理"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="p-4 flex flex-col flex-1">
-                <h3 className="font-bold text-gray-400 mb-1">Coming Soon</h3>
-                <p className="text-sm text-gray-400 mb-3 leading-relaxed">準備中です。しばらくお待ちください。</p>
+                <h3 className="font-bold text-gray-900 mb-1">新卒採用の情報整理</h3>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                  担当者・マネージャー・経営陣向け。採用で力を入れるべきところ・抜くべきところを見直すための情報整理ボード。
+                </p>
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {["人事", "採用", "新卒"].map((tag) => (
+                    <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://miro.com/app/board/uXjVGMf2_S0=/?share_link_id=106312710604"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
+                >
+                  詳しく見る →
+                </a>
               </div>
             </div>
 

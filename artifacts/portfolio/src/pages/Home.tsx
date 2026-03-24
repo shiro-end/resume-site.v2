@@ -94,51 +94,55 @@ export default function Home() {
         <section id="works" className="mb-16">
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Works</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              {
-                title: "作品名1",
-                description: "作品の簡単な説明文をここに入れてください。",
-                tags: ["タグ1", "タグ2"],
-                url: "#",
-              },
-              {
-                title: "作品名2",
-                description: "作品の簡単な説明文をここに入れてください。",
-                tags: ["タグ1", "タグ2", "タグ3"],
-                url: "#",
-              },
-              {
-                title: "作品名3",
-                description: "作品の簡単な説明文をここに入れてください。",
-                tags: ["タグ1", "タグ2"],
-                url: "#",
-              },
-            ].map((work) => (
-              <div key={work.title} className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
-                <div className="bg-gray-100 h-36 flex items-center justify-center text-gray-400 text-sm">
-                  thumbnail
-                </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <h3 className="font-bold text-gray-900 mb-1">{work.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">{work.description}</p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {work.tags.map((tag) => (
-                      <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={work.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
-                  >
-                    詳しく見る
-                  </a>
-                </div>
+            {/* Work 1 */}
+            <div className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+              <div className="bg-indigo-50 h-36 flex items-center justify-center">
+                <span className="text-4xl">🎤</span>
               </div>
-            ))}
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="font-bold text-gray-900 mb-1">面接官トレーニング</h3>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                  採用担当者・面接官向けの実践トレーニングツール。シナリオ形式で面接スキルを磨き、より公正で効果的な採用面接を実現できます。
+                </p>
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {["人事", "採用", "Webアプリ"].map((tag) => (
+                    <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://interview-training-app-api-server.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
+                >
+                  詳しく見る →
+                </a>
+              </div>
+            </div>
+
+            {/* Work 2 - Coming Soon */}
+            <div className="border border-dashed border-gray-300 rounded-lg overflow-hidden flex flex-col opacity-60">
+              <div className="bg-gray-50 h-36 flex items-center justify-center text-gray-300 text-3xl">
+                🚧
+              </div>
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="font-bold text-gray-400 mb-1">Coming Soon</h3>
+                <p className="text-sm text-gray-400 mb-3 leading-relaxed">準備中です。しばらくお待ちください。</p>
+              </div>
+            </div>
+
+            {/* Work 3 - Coming Soon */}
+            <div className="border border-dashed border-gray-300 rounded-lg overflow-hidden flex flex-col opacity-60">
+              <div className="bg-gray-50 h-36 flex items-center justify-center text-gray-300 text-3xl">
+                🚧
+              </div>
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="font-bold text-gray-400 mb-1">Coming Soon</h3>
+                <p className="text-sm text-gray-400 mb-3 leading-relaxed">準備中です。しばらくお待ちください。</p>
+              </div>
+            </div>
           </div>
         </section>
 

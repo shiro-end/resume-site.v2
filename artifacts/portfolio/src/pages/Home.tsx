@@ -96,8 +96,12 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* Work 1 */}
             <div className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
-              <div className="bg-indigo-50 h-36 flex items-center justify-center">
-                <span className="text-4xl">🎤</span>
+              <div className="h-36 overflow-hidden">
+                <img
+                  src="/work-interview-training.png"
+                  alt="面接官トレーニング"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="p-4 flex flex-col flex-1">
                 <h3 className="font-bold text-gray-900 mb-1">面接官トレーニング</h3>

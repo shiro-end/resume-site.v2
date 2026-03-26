@@ -158,14 +158,35 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Work 3 - Coming Soon */}
-            <div className="border border-dashed border-gray-300 rounded-lg overflow-hidden flex flex-col opacity-60">
-              <div className="bg-gray-50 h-36 flex items-center justify-center text-gray-300 text-3xl">
-                🚧
+            {/* Work 3 */}
+            <div className="border border-gray-200 rounded-lg overflow-hidden flex flex-col">
+              <div className="h-36 overflow-hidden">
+                <img
+                  src="/work-ob-visit.png"
+                  alt="OB/OG訪問AIチャット"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="p-4 flex flex-col flex-1">
-                <h3 className="font-bold text-gray-400 mb-1">Coming Soon</h3>
-                <p className="text-sm text-gray-400 mb-3 leading-relaxed">準備中です。しばらくお待ちください。</p>
+                <h3 className="font-bold text-gray-900 mb-1">OB/OG訪問AIチャット</h3>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                  社員を学習したAIが応答することで、企業理解を深められるページ。いつでも・何度でも疑問を解消できます。
+                </p>
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {["人事", "採用", "生成AI"].map((tag) => (
+                    <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://recruitsite-and-chatbot-api-server.vercel.app/chat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
+                >
+                  詳しく見る →
+                </a>
               </div>
             </div>
           </div>

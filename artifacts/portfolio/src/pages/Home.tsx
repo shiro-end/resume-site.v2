@@ -109,7 +109,7 @@ export default function Home() {
                   採用担当者・面接官向けの実践トレーニングツール。シナリオ形式で面接スキルを磨き、より公正で効果的な採用面接を実現できます。
                 </p>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["人事", "採用", "Webアプリ"].map((tag) => (
+                  {["Webアプリ作ってみた"].map((tag) => (
                     <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
                       {tag}
                     </span>
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="p-4 flex flex-col flex-1">
                 <h3 className="font-bold text-gray-900 mb-1">新卒採用の情報整理</h3>
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                  担当者・マネージャー・経営陣向け。採用で力を入れるべきところ・抜くべきところを見直すための情報整理ボード。
+                  担当者・マネージャー・経営陣向け。採用で力を入れるべきところ・抜くべきところをMiroを使ってまとめてみました。
                 </p>
                 <div className="flex flex-wrap gap-1 mb-4">
                   {["人事", "採用", "新卒"].map((tag) => (
@@ -173,14 +173,14 @@ export default function Home() {
                   社員を学習したAIが応答することで、企業理解を深められるページ。いつでも・何度でも疑問を解消できます。
                 </p>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["人事", "採用", "生成AI"].map((tag) => (
+                  {["Webアプリ作ってみた"].map((tag) => (
                     <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
                       {tag}
                     </span>
                   ))}
                 </div>
                 <a
-                  href="https://recruitsite-and-chatbot-api-server.vercel.app/chat"
+                  href="https://recruitsite-and-chatbot-api-server.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-gray-900 hover:underline mt-auto"

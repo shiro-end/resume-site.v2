@@ -116,7 +116,7 @@ export default function Home() {
                   ))}
                 </div>
                 <a
-                  href="https://interview-training-app-api-server.vercel.app/"
+                  href="https://claude-code-interview-trainer.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-gray-900 hover:underline mt-auto"

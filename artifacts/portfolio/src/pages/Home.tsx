@@ -250,7 +250,7 @@ export default function Home() {
                   ))}
                 </div>
                 <a
-                  href="https://claude-code-interview-trainer.vercel.app/"
+                  href="https://hrops-tools.com/test-corp/training"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-gray-900 hover:underline mt-auto"
@@ -314,7 +314,7 @@ export default function Home() {
                   ))}
                 </div>
                 <a
-                  href="https://recruitsite-and-chatbot-api-server.vercel.app/"
+                  href="https://hrops-tools.com/test-corp/chat/preview"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-gray-900 hover:underline mt-auto"

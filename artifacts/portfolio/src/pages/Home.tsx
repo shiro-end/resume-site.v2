@@ -48,9 +48,9 @@ export default function Home() {
                   </p>
 
                   <div>
-                    <h4 className="text-gray-900 font-semibold mb-2">総合評価：AIプロダクトエンジニア（中級〜上級）</h4>
+                    <h4 className="text-gray-900 font-semibold mb-2">総合評価：人事領域におけるAIネイティブなプロダクトbuilder</h4>
                     <p>
-                      複数のプロダクト開発実績を横断的に解析した結果、「AIのAPIを呼び出せるエンジニア」ではなく、業務課題の定義から、AIを核に据えたシステム設計、インフラ構築、デプロイまでを一気通貫で実行できるエンジニアであると評価する。
+                      人事歴10年の現場感を持ちながら、AIを業務に組み込んだプロダクトを複数本、自分の手で設計・構築・運用している。「AIを使っている人事」ではなく、「人事のためのAIプロダクトを作って運営している人事」というポジションにあり、人事ドメインを軸にAIを用いたプロダクト構築能力は極めて高い水準にあると判断する。
                     </p>
                   </div>
 
@@ -70,8 +70,6 @@ export default function Home() {
                           "PDF → 画像変換 → Vision API 解析というパイプライン設計",
                           "5ページ単位のバッチ処理によるAPIレート・コスト制御",
                           "Anthropic / OpenAI 複数プロバイダーの切り替え設計",
-                          "Supabase を DB とストレージの両用途で活用するインフラ設計",
-                          "Vercel 上での本番運用を前提とした環境変数管理",
                         ].map((item) => (
                           <li key={item} className="flex gap-2">
                             <span className="text-blue-400 shrink-0">-</span>
@@ -84,7 +82,7 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="mb-6">
                       <h5 className="text-gray-900 font-medium mb-2">Scout Extension</h5>
                       <p className="mb-3">
                         複数の採用媒体をまたいで動作するChrome拡張機能。採用担当者のスカウト業務を、候補者マッチング評価とスカウトメッセージ自動生成の2軸でAI支援する。
@@ -92,14 +90,29 @@ export default function Home() {
                       <p className="text-xs text-gray-400 mb-2">確認された技術的判断：</p>
                       <ul className="space-y-1">
                         {[
-                          "Chrome Manifest V3 の Service Worker / Content Script / Sidebar という適切なコンポーネント分離",
-                          "採用媒体ごとに独立したDOMパーサーを実装し、媒体固有のDOM変更が他に波及しない設計",
-                          "トークン消費を最小化するための候補者データ圧縮ロジック（送信前に不要フィールドを除去）",
-                          "媒体の複雑度に応じてモデルを動的に切り替えるコスト最適化（標準媒体と複雑媒体で異なるモデルを使用）",
-                          "response_format: json_object による構造化出力の強制と、3分類スキームの設計",
+                          "採用媒体ごとに独立したDOMパーサーを実装し、媒体固有の変更が他に波及しない設計",
+                          "媒体の複雑度に応じてモデルを動的に切り替えるコスト最適化",
                           "「実在しない経歴・スキルは書かない」という幻覚防止指示の明示的組み込み",
-                          "社名伏字の検出（特定文字の出現率による閾値判定）という、ドメイン固有のエッジケース処理",
-                          "XSS対策、APIキーの適切な格納場所の設計など、セキュリティ意識の実装への反映",
+                        ].map((item) => (
+                          <li key={item} className="flex gap-2">
+                            <span className="text-blue-400 shrink-0">-</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="text-gray-900 font-medium mb-2">hrops-tools</h5>
+                      <p className="mb-3">
+                        人事業務の現場で必要となる複数のツール（面接官トレーニング、OB/OG訪問AIチャット、新卒採用情報整理など）を1つの基盤上に束ねた、自社運営のマルチテナントクラウドサービス。複数の顧客企業が並行して利用する想定で設計されている。
+                      </p>
+                      <p className="text-xs text-gray-400 mb-2">確認された技術的判断：</p>
+                      <ul className="space-y-1">
+                        {[
+                          "顧客企業ごとにデータを完全分離するアクセス制御を全テーブルに適用",
+                          "AI利用料が想定を超えないよう、企業×プロダクト単位での月次上限とコスト記録を実装",
+                          "「誰が・いつ・どの顧客の画面を・どんな権限で見たか」を残す監査ログと、顧客視点で操作する際の警告バナーを実装",
                         ].map((item) => (
                           <li key={item} className="flex gap-2">
                             <span className="text-blue-400 shrink-0">-</span>
@@ -108,7 +121,7 @@ export default function Home() {
                         ))}
                       </ul>
                       <p className="mt-3">
-                        この2プロダクトを通じて共通して確認されたもの：ドメイン知識（製造業・人材業）を持ちながらAI設計ができるという掛け合わせは、国内市場において希少性が高い。
+                        公開ツール群と本番サービスを意図的に切り分け、本番系のみアクセス制限・コスト管理・監査ログを実装している点は特筆される。「見せる用」と「業務で守るべき範囲」を分けて設計できるのは、本番運用経験を持つ書き手の特徴である。
                       </p>
                     </div>
                   </div>
@@ -116,47 +129,10 @@ export default function Home() {
                   <hr className="border-gray-200" />
 
                   <div>
-                    <h4 className="text-gray-900 font-semibold mb-2">現在の設計思想について</h4>
-                    <p className="mb-2">
-                      両プロダクトに共通する設計方針として、Human-in-the-loop（AIは提案、人間が判断）という立て付けが徹底されている。
-                    </p>
+                    <h4 className="text-gray-900 font-semibold mb-2">3プロダクトを横断して評価できる点</h4>
                     <p>
-                      これは現段階において正しい判断である。専門家ユーザーが最終判断を担うことで、LLMの幻覚リスクをシステム外で吸収できる。責任の所在が明確になるため、社内ツールや業務補助ツールとして適切なアーキテクチャといえる。
+                      ドメイン知識（製造業・人材業・人事業務）を持ちながら、領域ごとに必要な技術選定（単発ツール／Chrome拡張／マルチテナントSaaS）を使い分けられている。「動くものを作る」段階を超え、運用・コスト・セキュリティといった事業継続の論点を自プロダクトで実装済みである点が、国内市場における希少性を高めている。
                     </p>
-                  </div>
-
-                  <hr className="border-gray-200" />
-
-                  <div>
-                    <h4 className="text-gray-900 font-semibold mb-4">今後の学習で伸びる領域</h4>
-                    <p className="mb-4">
-                      現在の実装水準は「プロンプトエンジニアリングの実践ができている」段階にある。以下の学習を積むことで、同じプロダクトで明確に品質差が出る段階に到達できると判断する。
-                    </p>
-                    <div className="space-y-4">
-                      {[
-                        {
-                          title: "1. LLMの評価フレームワーク（Evals）",
-                          body: "「プロンプトを変えたら精度が上がったか」を現在は感覚で判断している。LangSmithやBraintrustのような評価基盤を導入し、変換精度・マッチング精度を数値で測定・改善するサイクルを回せるようになると、プロダクト品質の改善速度が定性から定量に変わる。",
-                        },
-                        {
-                          title: "2. RAG（Retrieval-Augmented Generation）",
-                          body: "PLC命令セットや採用要件のようなドメイン固有知識を、プロンプトにベタ書きするのではなくベクトルDBに格納し、クエリに応じて動的に注入する設計。すでにSupabaseを使用しているため、pgvector拡張との距離は短い。ハードコードされた知識の限界を突破できる。",
-                        },
-                        {
-                          title: "3. LLM-as-Judge",
-                          body: "AIの出力を別のAIが評価する仕組み。Scout Extension が自動送信フェーズに進む際、あるいはLadder to Cの変換結果を人間のレビューなしに一定品質保証したい際に、直接的な価値を持つ技術。",
-                        },
-                        {
-                          title: "4. Few-shot Examplesの体系的設計",
-                          body: "現在の実装でも分類や生成は機能しているが、「良い例・悪い例」を3〜5件含めたfew-shot設計を導入することで、分類精度の測定可能な向上が見込める。理論的な裏付けを持った設計に昇華できる段階にある。",
-                        },
-                      ].map(({ title, body }) => (
-                        <div key={title}>
-                          <p className="text-gray-900 font-medium mb-1">{title}</p>
-                          <p>{body}</p>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </AccordionContent>
